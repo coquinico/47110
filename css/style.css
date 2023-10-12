@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #232f3e;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.search input {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #ffbf00;
+}
+.cart a {
+    
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #ff9900;
+    border-radius: 3px;
+}
+
+
+main {
+    padding: 20px;
+
+}
+main h1 {
+    color: #232f3e;
+    margin-left: 1rem;
+
+}
+
+main .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: column;
+    image-rendering: cover;
+    
+
+}
+
+.productos {
+    width: calc(20.33% - 20px);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.productos h2 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.productos span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.productos button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #232f3e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
