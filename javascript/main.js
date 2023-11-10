@@ -2,9 +2,16 @@ const buttons = document.querySelectorAll('.productos button');
 const mensajeBienvenida = [
     "¡Bienvenido!, Selecciona los productos deseados",]
 
+//LOCAL STORAGE
+const mensajeBienvenidaMostrado = localStorage.getItem('mensajeBienvenidaMostrado');
+if (!mensajeBienvenidaMostrado) {
+    alert("¡Bienvenido! Selecciona los productos deseados");
 
-  alert(mensajeBienvenida);
-const productos = [
+    localStorage.setItem('mensajeBienvenidaMostrado', true);
+}
+
+
+let productos = [
     { nombre: "Medias", precio: 10, stock: 50 },
     { nombre: "Enterito", precio: 100, stock: 20 },
     { nombre: "Guantes", precio: 100, stock: 10 },
@@ -14,6 +21,8 @@ const productos = [
 ];
 let costoTotal = 0;
 let carrito = [];
+
+//DOM
 const cartLink = document.querySelector('.cart a');
 
 cartLink.addEventListener('click', function() {
@@ -45,6 +54,8 @@ function restarDelStock(producto, cantidad) {
 function addToCart(producto, cantidad) {
     carrito.push({ producto, cantidad });
 }
+
+
 
 //función para calcular el costo total del carrito
 function calcularCostoTotalCarrito(carrito) {
