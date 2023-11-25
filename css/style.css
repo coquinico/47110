@@ -103,6 +103,27 @@ main .cards {
     
 
 }
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    width: 40px;
+    text-align: center;
+}
+
+.productos button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
 .productos {
     width: calc(20.33% - 20px);

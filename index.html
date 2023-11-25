@@ -23,8 +23,8 @@
                 </ul>
             </nav>
             <div class="search">
-                <input type="text" placeholder="Search">
-                <button>Search</button>
+                <input type="text" id="searchInput" placeholder="Search">
+                <button id="searchButton">Search</button>
             </div>
             <div class="cart">
                 <a href=""><img  src="assets/img/cart.svg"></a>
@@ -36,50 +36,63 @@
                 <img width="100%" src="assets/img/amazn.png" alt="">
             </section>
             <div>
-                <h1>Productos Seleccionados</h1>
+                <h1>Productos</h1>
             </div>
             <section class="cards">
             <div class="productos" id="Medias">
                 <img src="assets/img/alo socks.jpg" width="100%" alt="Medias Alo">
                 <h2>Medias</h2>
-                <p>Medias de algodon marca ALO</p>
+                <p>Medias  ALO</p>
                 <span>$10</span>
-                <button>Add to Cart </button>
+                <div class="quantity-container">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button onclick="addToCart('Medias')">Add</button>
+                    <button data-product="Medias">Delete</button>
+                </div>
             </div>
             <div class="productos" id="Enterito">
                 <img src="assets/img/aritzia onesie.jpeg"  width="100%" alt="Enterito aritzia">
                 <h2>Enterito</h2>
-                <p>Enterito de algodon marca Aritzia</p>
+                <p>Enterito Aritzia</p>
                 <span>$99.99</span>
-                <button>Add to Cart</button>
+                <div class="quantity-container">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button onclick="addToCart('Enterito')">Add </button>
+                    <button data-product="Enterito">Delete</button>
+                </div>
             </div>
             <div class="productos" id="Guantes">
                 <img src="assets/img/rvca-guantes-ouano-shoo.jpg"   width="100%" alt="RVCA/EVERLAST">
                 <h2>Guantes</h2>
-                <p>Guante artes marciales marca RVCA</p>
+                <p>Guante  RVCA</p>
                 <span>$35.99</span>
-                <button>Add to Cart</button>
+                <div class="quantity-container">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button onclick="addToCart('Guantes')">Add</button>
+                    <button data-product="Guantes">Delete</button>
+                </div>
             </div>
             <div class="productos" id="Zapatillas">
                 <img src="assets/img/nike.jpeg"  width="100%" alt="Nike Sneaker">
                 <h2>Zapatillas</h2>
-                <p>Zapatillas Nike Air Zoom Division</p>
+                <p>Zapatillas Nike </p>
                 <span>$150</span>
-                <button>Add to Cart</button>
-            </div>
-            <div class="productos" id="GuantesE">
-                <img src="assets/img/mens-other-accessories-rvca-rvca-everlast-smith-street-boxing-glove-white-wht.jpg"  width="100%" alt="Product 1">
-                <h2>Guantes Everlast</h2>
-                <p>marca Everlast colaboracion con RVCA</p>
-                <span>$50</span>
-                <button>Add to Cart</button>
+                <div class="quantity-container">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button onclick="addToCart('Zapatillas')">Add   </button>
+                    <button data-product="Zapatillas">Delete</button>
+                </div>
             </div>
             <div class="productos" id="Bolso">
                 <img src="assets/img/bolso.jpg"  width="100%" alt="Product 1">
                 <h2>Bolso</h2>
-                <p>Bolso camuflado marca FOX Racing</p>
+                <p>Bolso camuflado FOX Racing</p>
                 <span>$75</span>
-                <button>Add to Cart</button>
+                <div class="quantity-container">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button onclick="addToCart('Bolso')">Add </button>
+                    <button data-product="Bolso">Delete</button>
+                </div>
             </div>
         </section>
 
@@ -91,5 +104,12 @@
     </footer>
 
     <script src="javascript/main.js"></script>
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </body>
 </html>
