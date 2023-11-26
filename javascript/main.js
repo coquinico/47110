@@ -1,11 +1,30 @@
+let productos;
+const url = "productos.json";
 
-let productos = [
-    { nombre: "Medias", precio: 10, stock: 50 },
-    { nombre: "Enterito", precio: 100, stock: 20 },
-    { nombre: "Guantes", precio: 100, stock: 10 },
-    { nombre: "Zapatillas", precio: 35, stock: 30 },
-    { nombre: "Bolso", precio: 80, stock: 15 }
-];
+async function fetchProductos() {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        productos = await response.json();
+        return productos;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw error;
+    }
+}
+
+
+fetchProductos()
+    .then(productos => {
+        console.log(productos);
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+    });
 
 //seleccionar todos los botones
 const buttons = document.querySelectorAll('.productos button');
@@ -43,6 +62,7 @@ let costoTotal = 0;
 let carrito = [];
 
 //DOM
+
 const cartLink = document.querySelector('.cart a');
 
 cartLink.addEventListener('click', function () {
@@ -158,25 +178,26 @@ function performSearch() {
 
     const filteredProducts = productos.filter(product => product.nombre.toLowerCase().includes(searchTerm));
 
-
     displayFilteredProducts(filteredProducts);
 }
-//mostrar productos filtrados
+
+// Function to create an element for each product and add it to the DOM
 function displayFilteredProducts(filteredProducts) {
     const cardsContainer = document.querySelector('.cards');
 
-
+    // Clear previous content
     cardsContainer.innerHTML = '';
-
 
     filteredProducts.forEach(product => {
         const productContainer = document.createElement('div');
         productContainer.classList.add('productos');
 
         productContainer.innerHTML = `
+        
             <h2>${product.nombre}</h2>
             <span>$${product.precio}</span>
             <div class="quantity-container">
+                <button onclick="addToCart('${product.nombre}')">Add to Cart</button>
             </div>
         `;
 
