@@ -27,14 +27,18 @@
                 <button id="searchButton">Search</button>
             </div>
             <div class="cart">
-                <a href=""><img  src="assets/img/cart.svg"></a>
+                <a href="" id="cartLink"><img  src="assets/img/cart.svg"></a>
             </div>
         </div>
     </header>
     <main>
-            <section>
-                <img width="100%" src="assets/img/amazn.png" alt="">
+              <div id="sidebar">
+                <!-- Selected products will be displayed here -->
+            </div>  
+            <section class="center-image">
+                <img   class="Amazon"  src="assets/img/amazn.png" alt=""> 
             </section>
+
             <div>
                 <h1>Productos</h1>
             </div>
@@ -86,7 +90,7 @@
             <div class="productos" id="Bolso">
                 <img src="assets/img/bolso.jpg"  width="100%" alt="Product 1">
                 <h2>Bolso</h2>
-                <p>Bolso camuflado FOX Racing</p>
+                <p>Bolso camuflado FOX </p>
                 <span>$75</span>
                 <div class="quantity-container">
                     <input type="number" class="quantity-input" value="1" min="1">
@@ -95,9 +99,7 @@
                 </div>
             </div>
         </section>
-        <div id="carrito-container">
-            <!-- Aquí se mostrará el contenido del carrito -->
-        </div>
+
     </main>
     <footer>
         <div class="container">

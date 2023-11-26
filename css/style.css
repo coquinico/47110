@@ -160,4 +160,52 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 90px;
+}
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Amazon {
+    width: 40%;
+    max-width: 100%;
+}
+#sidebar {
+    position: fixed;
+    top: 55px; 
+    right: 0;
+    width: 353px;
+    height: 30%; 
+    background-color: white;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); 
+    color: black;
+}
+
+
+.sidebar-product {
+    margin-bottom: 15px;
+    display: flex; 
+    align-items: center; 
+}
+
+.sidebar-product button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+.sidebar-product button:hover {
+    background-color: #e68a00; 
+}
+
+main {
+    margin: 80px; 
 }
