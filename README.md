@@ -26,7 +26,7 @@ Este proyecto es parte de un curso de JavaScript donde se implementa un carrito 
 
 ## Instrucciones de Ejecución
 
-1. Clona este repositorio: `git clone https://github.com/tu-usuario/tu-repositorio.git`
+1. Clona este repositorio
 2. Abre el archivo `index.html` en tu navegador.
 
 MUCHAS GRACIAS! 🚀
